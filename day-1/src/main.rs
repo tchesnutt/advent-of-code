@@ -21,6 +21,14 @@ fn main() {
         }
     }
 
+    calc_distance_between(left_heap.clone(), right_heap.clone());
+}
+
+fn calc_similarity_score(mut left_heap: BinaryHeap<Reverse<i32>>, mut right_heap: BinaryHeap<Reverse<i32>>) {
+
+}
+
+fn calc_distance_between(mut left_heap: BinaryHeap<Reverse<i32>>, mut right_heap: BinaryHeap<Reverse<i32>>) {
     let mut total_distance = 0;
     while !left_heap.is_empty() && !right_heap.is_empty() {
         let left_num = left_heap.pop();
@@ -31,11 +39,9 @@ fn main() {
         println!("left: {}, right {}, distance {}, total {}", left_num, right_num, distance, total_distance);
         total_distance += distance;
     }
-
+    
     println!("{}", total_distance);
-    // return distance
 }
-
 
 fn read_lines(filename: &str) -> Vec<String> {
     read_to_string(filename) 
