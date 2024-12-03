@@ -18,7 +18,7 @@ fn calc_similarity_score(lines: Vec<String>) {
 
     for line in lines {
         let line: Vec<&str> = line.split("   ").collect();
-        for (index, num) in line.iter().enumerate() {
+        for (index, nm) in line.iter().enumerate() {
             let num: i32 = num.parse().unwrap();
             match index {
                 0 => left_list.push(num),
